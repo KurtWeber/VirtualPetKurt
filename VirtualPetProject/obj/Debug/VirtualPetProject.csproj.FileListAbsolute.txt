@@ -1,1 +1,5 @@
 c:\users\wecancodeit\documents\visual studio 2015\Projects\VirtualPetProject\VirtualPetProject\bin\Debug\VirtualPetProject.exe.config
+c:\Users\WeCanCodeIT\Documents\Visual Studio 2015\Projects\VirtualPetProject\VirtualPetProject\bin\Debug\VirtualPetProject.exe
+c:\Users\WeCanCodeIT\Documents\Visual Studio 2015\Projects\VirtualPetProject\VirtualPetProject\bin\Debug\VirtualPetProject.pdb
+c:\Users\WeCanCodeIT\Documents\Visual Studio 2015\Projects\VirtualPetProject\VirtualPetProject\obj\Debug\VirtualPetProject.exe
+c:\Users\WeCanCodeIT\Documents\Visual Studio 2015\Projects\VirtualPetProject\VirtualPetProject\obj\Debug\VirtualPetProject.pdb
