@@ -29,9 +29,16 @@ namespace VirtualPetProject
             Console.WriteLine("        '._ '-=-' _.'");
             Console.WriteLine("           '~---~'\n\n");
 
-            // Create instance of Virtual Pet
+            // Virtual pet status
+            Console.WriteLine("{0}'s status\n", newVPet.VpName);
 
-            // Menu print selection
+            Console.WriteLine("Hunger - {0}", newVPet.VpHungry );
+            Console.WriteLine("Waste - {0}", newVPet.VpWaste);
+            Console.WriteLine("Boredom - {0}", newVPet.VpBoredom);
+            Console.WriteLine("Sleepy - {0}", newVPet.VpSleepy);
+            Console.WriteLine("Sick - {0}\n", newVPet.VpSleepy);
+           
+            // Menu selection
             Console.WriteLine("What do you want to do for {0}? \n", newVPet.VpName);
             Console.WriteLine("1. Feed {0}", newVPet.VpName);
             Console.WriteLine("2. Let {0} out", newVPet.VpName);
@@ -39,11 +46,36 @@ namespace VirtualPetProject
             Console.WriteLine("4. Take {0} to the vet", newVPet.VpName);
             Console.WriteLine("5. Ignore {0}\n", newVPet.VpName);
 
-            newVPet.feed();
-            newVPet.letOut();
-            newVPet.play();
-            newVPet.toVet();
-            newVPet.tick();
+            // Menu to Class methods
+            int menuOption;
+            menuOption = int.Parse(Console.ReadLine());
+            switch (menuOption)
+            {
+                case 1:
+                    newVPet.feed();
+                    break;
+                case 2:
+                    newVPet.letOut();
+                    break;
+                case 3:
+                    newVPet.play();
+                    break;
+                case 4:
+                    newVPet.toVet();
+                    break;
+                case 5:
+                    newVPet.tick();
+                    break;
+                default:
+                    Console.WriteLine("please select options 1 - 3");
+                    break;
+            }
+
+            
+            
+            
+            
+            
         }
     }
 }

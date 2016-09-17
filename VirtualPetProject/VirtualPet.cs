@@ -10,11 +10,11 @@ namespace VirtualPetProject
     {
         // Fields - Variables
         private string vpName;
-        private int vpHungry;
-        private int vpWaste;
-        private int vpBoredom;
-        private int vpSleepy;
-        private int vpSick;
+        private int vpHungry = 10;
+        private int vpWaste = 10;
+        private int vpBoredom = 10;
+        private int vpSleepy = 10;
+        private int vpSick = 10;
 
         // Properties
         public string VpName
@@ -48,7 +48,19 @@ namespace VirtualPetProject
         // Methods
         public void feed()
         {
-            Console.WriteLine("Feed");
+            if (vpHungry < 10)
+            {
+                vpHungry++;
+                vpWaste--;
+                Console.WriteLine("Waste - {0}", vpHungry);
+            }
+            else
+            {
+                vpWaste--;
+                Console.WriteLine("{0} isn't hungry right now", vpName);
+                Console.WriteLine("Waste - {0}", vpWaste);
+            }
+            
         }
         public void letOut()
         {
