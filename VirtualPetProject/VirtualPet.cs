@@ -17,6 +17,11 @@ namespace VirtualPetProject
         private int vpSick;
 
         // Properties
+        public string VpName
+        {
+            get { return this.vpName; }
+            set { this.vpName = value; }
+        }
         // -Hungry
         // -Waste
         // -Boredom
@@ -30,7 +35,7 @@ namespace VirtualPetProject
         }
         public void letOut()
         {
-            Console.WriteLine("letOut");
+            Console.WriteLine("Let Out");
         }
         public void play()
         {
