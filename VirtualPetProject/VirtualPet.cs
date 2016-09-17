@@ -22,10 +22,27 @@ namespace VirtualPetProject
             get { return this.vpName; }
             set { this.vpName = value; }
         }
-        // -Hungry
-        // -Waste
-        // -Boredom
-
+        public int VpHungry
+        {
+            get { return this.vpHungry; }
+        }
+        public int VpWaste
+        {
+            get { return this.vpWaste; }
+        }
+        public int VpBoredom
+        {
+            get { return this.vpBoredom; }
+        }
+        public int VpSleepy
+        {
+            get { return this.vpSleepy; }
+        }
+        public int VpSick
+        {
+            get { return this.vpSick; }
+        }
+        
         // Constructors
 
         // Methods
@@ -44,6 +61,10 @@ namespace VirtualPetProject
         public void toVet()
         {
             Console.WriteLine("Vet");
+        }
+        public void ignore()
+        {
+            Console.WriteLine("Ignore");
         }
         public void tick()
         {
