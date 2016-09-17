@@ -8,20 +8,41 @@ namespace VirtualPetProject
 {
     class VirtualPet
     {
-        // Fields
-        
+        // Fields - Variables
+        private string vpName;
+        private int vpHungry;
+        private int vpWaste;
+        private int vpBoredom;
+        private int vpSleepy;
+        private int vpSick;
+
         // Properties
         // -Hungry
         // -Waste
         // -Boredom
 
         // Constructors
-        
+
         // Methods
-        // -Feed
-        // -Let out
-        // -Play 
-        // -To vet
-        // -Tick
+        public void feed()
+        {
+            Console.WriteLine("Feed");
+        }
+        public void letOut()
+        {
+            Console.WriteLine("letOut");
+        }
+        public void play()
+        {
+            Console.WriteLine("Play");
+        }
+        public void toVet()
+        {
+            Console.WriteLine("Vet");
+        }
+        public void tick()
+        {
+            Console.WriteLine("Tick");
+        }
     }
 }

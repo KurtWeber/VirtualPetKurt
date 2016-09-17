@@ -28,9 +28,13 @@ namespace VirtualPetProject
             Console.WriteLine("        '._ '-=-' _.'");
             Console.WriteLine("           '~---~'\n\n");
 
-
-
-
+            // Create instance of Virtual Pet
+            VirtualPet newVPet = new VirtualPet();
+            newVPet.feed();
+            newVPet.letOut();
+            newVPet.play();
+            newVPet.toVet();
+            newVPet.tick();
         }
     }
 }
