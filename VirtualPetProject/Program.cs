@@ -13,10 +13,8 @@ namespace VirtualPetProject
             Console.WriteLine("Congratulations on purchasing your new Virtual Pet!");
             Console.Write("Please enter a name for your new Virtual Pet: ");
             string vpName = Console.ReadLine();
-            Console.WriteLine("\nTaking good care of your Virtual Pet {0} will give you many years", vpName);
-            Console.WriteLine("of enjoyment.\n");
-            Console.WriteLine("But beware, not taking care of your Virtual Pet may result in some");
-            Console.WriteLine("unwanted behavior.\n");
+            Console.WriteLine("\nTaking good care of your Virtual Pet {0} will give you many years of enjoyment.\n", vpName);
+            Console.WriteLine("But beware, not taking care of your Virtual Pet may result in some unwanted behavior.\n");
             Console.WriteLine("Meet {0}!\n", vpName);
             Console.WriteLine("            __,__");
             Console.WriteLine("   .--.  .-\"     \"-.  .--.");
