@@ -26,7 +26,7 @@ namespace VirtualPetProject
             Console.WriteLine("       |  \\._   _./  |");
             Console.WriteLine("       \\   \\ `~` /   /");
             Console.WriteLine("        '._ '-=-' _.'");
-            Console.WriteLine("           '~---~'\n");
+            Console.WriteLine("           '~---~'\n\n");
 
 
 
