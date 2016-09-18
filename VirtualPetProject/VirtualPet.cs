@@ -47,15 +47,21 @@ namespace VirtualPetProject
             {
                 vpHungry = 10;
                 vpWaste--;
+                Console.WriteLine("You've fed {0}                       ", vpName);
+                Console.WriteLine();
             }
             else
             {
                 Console.WriteLine("{0} isn't hungry right now", vpName);
+                Console.WriteLine();
+                vpBoredom -= 2; 
             }
-            Console.WriteLine("Hunger - {0}", vpHungry);
-            Console.WriteLine("Waste - {0}", vpWaste);
-            Console.WriteLine("Boredom - {0}", vpBoredom);
-            Console.WriteLine("Sick - {0}\n", vpSick);
+            Console.SetCursorPosition(0, Console.CursorTop - 17);
+            Console.WriteLine("Hunger - {0} ", vpHungry);
+            Console.WriteLine("Waste - {0} ", vpWaste);
+            Console.WriteLine("Boredom - {0} ", vpBoredom);
+            Console.WriteLine("Sick - {0} ", vpSick);
+            Console.WriteLine();
 
         }
         public void letOut()
@@ -64,31 +70,43 @@ namespace VirtualPetProject
             {
                 vpHungry--;
                 vpWaste = 10;
+                Console.WriteLine("You've let {0} out                   ", vpName);
+                Console.WriteLine();
             }
             else
             {
                 Console.WriteLine("{0} doesn't need to go out right now", vpName);
+                Console.WriteLine();
+                vpBoredom -= 2;
             }
-            Console.WriteLine("Hunger - {0}", vpHungry);
-            Console.WriteLine("Waste - {0}", vpWaste);
-            Console.WriteLine("Boredom - {0}", vpBoredom);
-            Console.WriteLine("Sick - {0}\n", vpSick);
+            Console.SetCursorPosition(0, Console.CursorTop - 17);
+            Console.WriteLine("Hunger - {0} ", vpHungry);
+            Console.WriteLine("Waste - {0} ", vpWaste);
+            Console.WriteLine("Boredom - {0} ", vpBoredom);
+            Console.WriteLine("Sick - {0} ", vpSick);
+            Console.WriteLine();
         }
         public void play()
         {
             if (vpBoredom < 10)
             {
-                vpBoredom += 2;
-                vpHungry -= 2; ;
+                vpBoredom = 10;
+                vpHungry -= 2;
+                Console.WriteLine("You've played with {0}               ", vpName);
+                Console.WriteLine();
             }
             else
             {
-                Console.WriteLine("{0} doesn't want to play right now", vpName);
+                Console.WriteLine("{0} doesn't want to play right now   ", vpName);
+                Console.WriteLine();
+                vpBoredom -= 2;
             }
-            Console.WriteLine("Hunger - {0}", vpHungry);
-            Console.WriteLine("Waste - {0}", vpWaste);
-            Console.WriteLine("Boredom - {0}", vpBoredom);
-            Console.WriteLine("Sick - {0}\n", vpSick);
+            Console.SetCursorPosition(0, Console.CursorTop - 17);
+            Console.WriteLine("Hunger - {0} ", vpHungry);
+            Console.WriteLine("Waste - {0} ", vpWaste);
+            Console.WriteLine("Boredom - {0} ", vpBoredom);
+            Console.WriteLine("Sick - {0} ", vpSick);
+            Console.WriteLine();
         }
         public void toVet()
         {
@@ -97,20 +115,49 @@ namespace VirtualPetProject
                 vpSick = 10;
                 vpHungry--;
                 vpBoredom--;
-
-                Console.WriteLine("Vet");
+                Console.WriteLine("You've taken {0} to the vet          ", vpName);
+                Console.WriteLine();
             }
-            Console.WriteLine("Hunger - {0}", vpHungry);
-            Console.WriteLine("Waste - {0}", vpWaste);
-            Console.WriteLine("Boredom - {0}", vpBoredom);
-            Console.WriteLine("Sick - {0}\n", vpSick);
+            else
+            {
+                vpBoredom += 2;
+                Console.WriteLine("{0} feels fine                       ", vpName);
+                Console.WriteLine();
+            }
+            Console.SetCursorPosition(0, Console.CursorTop - 17);
+            Console.WriteLine("Hunger - {0} ", vpHungry);
+            Console.WriteLine("Waste - {0} ", vpWaste);
+            Console.WriteLine("Boredom - {0} ", vpBoredom);
+            Console.WriteLine("Sick - {0} ", vpSick);
+            Console.WriteLine();
         }
         public void ignore()
         {
-            Console.WriteLine("Hunger - {0}", vpHungry);
-            Console.WriteLine("Waste - {0}", vpWaste);
-            Console.WriteLine("Boredom - {0}", vpBoredom);
-            Console.WriteLine("Sick - {0}\n", vpSick);
+            if (vpHungry < 10)
+            {
+                vpHungry -= 2;
+            }
+            if (vpWaste < 10)
+            {
+                vpWaste -= 2;
+            }
+            if (vpBoredom < 10)
+            {
+                vpBoredom -= 3;
+            }
+            if (vpSick < 10)
+            {
+                vpSick -= 2;
+            }
+            Console.WriteLine("Ingnoring {0} will only upset your pet   ", vpName);
+            Console.WriteLine();
+            Console.SetCursorPosition(0, Console.CursorTop - 17);
+            Console.WriteLine("Hunger - {0} ", vpHungry);
+            Console.WriteLine("Waste - {0} ", vpWaste);
+            Console.WriteLine("Boredom - {0} ", vpBoredom);
+            Console.WriteLine("Sick - {0} ", vpSick);
+            Console.WriteLine();
+
         }
         public void tick()
         {

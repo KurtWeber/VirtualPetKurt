@@ -67,7 +67,7 @@ namespace VirtualPetProject
                         newVPet.toVet();
                         break;
                     case 5:
-                        newVPet.tick();
+                        newVPet.ignore();
                         break;
                     case 6:
                         Console.WriteLine("Goodbye!");
