@@ -12,6 +12,7 @@ namespace VirtualPetProject
         {
             // Initialize menuOption
             int menuOption;
+            int menuCount = 0;
             Console.WriteLine("Congratulations on purchasing your new Virtual Pet!");
             Console.Write("Please enter a name for your new Virtual Pet: ");
             VirtualPet newVPet = new VirtualPet();
@@ -68,6 +69,7 @@ namespace VirtualPetProject
                         break;
                     case 5:
                         newVPet.ignore();
+                        menuCount += 1;
                         break;
                     case 6:
                         Console.WriteLine("Goodbye!");
@@ -76,7 +78,12 @@ namespace VirtualPetProject
                         Console.WriteLine("Please select options 1 - 6");
                         break;
                 }
-            } while (menuOption != 6); 
+            } while (menuOption != 6 && menuCount != 3); 
+            // Virtual Pet will run away if ignored 3 times 
+            if (menuCount == 3)
+            {
+                newVPet.tick();
+            }
         }
     }
 }

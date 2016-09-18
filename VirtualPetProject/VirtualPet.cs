@@ -47,12 +47,12 @@ namespace VirtualPetProject
             {
                 vpHungry = 10;
                 vpWaste--;
-                Console.WriteLine("You've fed {0}                       ", vpName);
+                Console.WriteLine("You've fed {0}                        ", vpName);
                 Console.WriteLine();
             }
             else
             {
-                Console.WriteLine("{0} isn't hungry right now", vpName);
+                Console.WriteLine("{0} isn't hungry right now            ", vpName);
                 Console.WriteLine();
                 vpBoredom -= 2; 
             }
@@ -70,12 +70,12 @@ namespace VirtualPetProject
             {
                 vpHungry--;
                 vpWaste = 10;
-                Console.WriteLine("You've let {0} out                   ", vpName);
+                Console.WriteLine("You've let {0} out                    ", vpName);
                 Console.WriteLine();
             }
             else
             {
-                Console.WriteLine("{0} doesn't need to go out right now", vpName);
+                Console.WriteLine("{0} doesn't need to go out right now ", vpName);
                 Console.WriteLine();
                 vpBoredom -= 2;
             }
@@ -92,12 +92,12 @@ namespace VirtualPetProject
             {
                 vpBoredom = 10;
                 vpHungry -= 2;
-                Console.WriteLine("You've played with {0}               ", vpName);
+                Console.WriteLine("You've played with {0}                ", vpName);
                 Console.WriteLine();
             }
             else
             {
-                Console.WriteLine("{0} doesn't want to play right now   ", vpName);
+                Console.WriteLine("{0} doesn't want to play right now    ", vpName);
                 Console.WriteLine();
                 vpBoredom -= 2;
             }
@@ -115,13 +115,13 @@ namespace VirtualPetProject
                 vpSick = 10;
                 vpHungry--;
                 vpBoredom--;
-                Console.WriteLine("You've taken {0} to the vet          ", vpName);
+                Console.WriteLine("You've taken {0} to the vet           ", vpName);
                 Console.WriteLine();
             }
             else
             {
                 vpBoredom += 2;
-                Console.WriteLine("{0} feels fine                       ", vpName);
+                Console.WriteLine("{0} feels fine                        ", vpName);
                 Console.WriteLine();
             }
             Console.SetCursorPosition(0, Console.CursorTop - 17);
@@ -133,23 +133,23 @@ namespace VirtualPetProject
         }
         public void ignore()
         {
-            if (vpHungry < 10)
+            if (vpHungry != 0)
             {
                 vpHungry -= 2;
             }
-            if (vpWaste < 10)
+            if (vpWaste != 0)
             {
                 vpWaste -= 2;
             }
-            if (vpBoredom < 10)
+            if (vpBoredom != 0)
             {
                 vpBoredom -= 3;
             }
-            if (vpSick < 10)
+            if (vpSick != 0)
             {
                 vpSick -= 2;
             }
-            Console.WriteLine("Ingnoring {0} will only upset your pet   ", vpName);
+            Console.WriteLine("Ingnoring {0} will only upset your pet    ", vpName);
             Console.WriteLine();
             Console.SetCursorPosition(0, Console.CursorTop - 17);
             Console.WriteLine("Hunger - {0} ", vpHungry);
@@ -161,10 +161,20 @@ namespace VirtualPetProject
         }
         public void tick()
         {
-            Console.WriteLine("Hunger - {0}", vpHungry);
-            Console.WriteLine("Waste - {0}", vpWaste);
-            Console.WriteLine("Boredom - {0}", vpBoredom);
-            Console.WriteLine("Sick - {0}\n", vpSick);
+
+            Console.Clear();
+            Console.WriteLine("\n\aYour Virtual Pet {0} escaped because you haven't taken good care of it\n", vpName);
+            Console.WriteLine("            __,__");
+            Console.WriteLine("   .--.  .-\"     \"-.  .--.");
+            Console.WriteLine("  / .. \\/  .-. .-.  \\/ .. \\");
+            Console.WriteLine(" | |  '|  /   Y   \\  |'  | |");
+            Console.WriteLine(" | \\   \\  \\ 0 | 0 /  /   / |");
+            Console.WriteLine("  \\ '- ,\\.-\"`` ``\"-./, -' /");
+            Console.WriteLine("   `'-' /    ^ ^    \\ '-'`");
+            Console.WriteLine("       |    .---.    |");
+            Console.WriteLine("       \\   /_____\\   /");
+            Console.WriteLine("        '._       _.'");
+            Console.WriteLine("           '~---~'\n\n");
         }
     }
 }
