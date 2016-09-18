@@ -13,7 +13,6 @@ namespace VirtualPetProject
         private int vpHungry = 10;
         private int vpWaste = 10;
         private int vpBoredom = 10;
-        private int vpSleepy = 10;
         private int vpSick = 10;
 
         // Properties
@@ -34,11 +33,7 @@ namespace VirtualPetProject
         {
             get { return this.vpBoredom; }
         }
-        public int VpSleepy
-        {
-            get { return this.vpSleepy; }
-        }
-        public int VpSick
+       public int VpSick
         {
             get { return this.vpSick; }
         }
@@ -50,37 +45,79 @@ namespace VirtualPetProject
         {
             if (vpHungry < 10)
             {
-                vpHungry++;
+                vpHungry = 10;
                 vpWaste--;
-                Console.WriteLine("Waste - {0}", vpHungry);
             }
             else
             {
-                vpWaste--;
                 Console.WriteLine("{0} isn't hungry right now", vpName);
-                Console.WriteLine("Waste - {0}", vpWaste);
             }
-            
+            Console.WriteLine("Hunger - {0}", vpHungry);
+            Console.WriteLine("Waste - {0}", vpWaste);
+            Console.WriteLine("Boredom - {0}", vpBoredom);
+            Console.WriteLine("Sick - {0}\n", vpSick);
+
         }
         public void letOut()
         {
-            Console.WriteLine("Let Out");
+            if (vpWaste < 10)
+            {
+                vpHungry--;
+                vpWaste = 10;
+            }
+            else
+            {
+                Console.WriteLine("{0} doesn't need to go out right now", vpName);
+            }
+            Console.WriteLine("Hunger - {0}", vpHungry);
+            Console.WriteLine("Waste - {0}", vpWaste);
+            Console.WriteLine("Boredom - {0}", vpBoredom);
+            Console.WriteLine("Sick - {0}\n", vpSick);
         }
         public void play()
         {
-            Console.WriteLine("Play");
+            if (vpBoredom < 10)
+            {
+                vpBoredom += 2;
+                vpHungry -= 2; ;
+            }
+            else
+            {
+                Console.WriteLine("{0} doesn't want to play right now", vpName);
+            }
+            Console.WriteLine("Hunger - {0}", vpHungry);
+            Console.WriteLine("Waste - {0}", vpWaste);
+            Console.WriteLine("Boredom - {0}", vpBoredom);
+            Console.WriteLine("Sick - {0}\n", vpSick);
         }
         public void toVet()
         {
-            Console.WriteLine("Vet");
+            if (vpSick < 10)
+            {
+                vpSick = 10;
+                vpHungry--;
+                vpBoredom--;
+
+                Console.WriteLine("Vet");
+            }
+            Console.WriteLine("Hunger - {0}", vpHungry);
+            Console.WriteLine("Waste - {0}", vpWaste);
+            Console.WriteLine("Boredom - {0}", vpBoredom);
+            Console.WriteLine("Sick - {0}\n", vpSick);
         }
         public void ignore()
         {
-            Console.WriteLine("Ignore");
+            Console.WriteLine("Hunger - {0}", vpHungry);
+            Console.WriteLine("Waste - {0}", vpWaste);
+            Console.WriteLine("Boredom - {0}", vpBoredom);
+            Console.WriteLine("Sick - {0}\n", vpSick);
         }
         public void tick()
         {
-            Console.WriteLine("Tick");
+            Console.WriteLine("Hunger - {0}", vpHungry);
+            Console.WriteLine("Waste - {0}", vpWaste);
+            Console.WriteLine("Boredom - {0}", vpBoredom);
+            Console.WriteLine("Sick - {0}\n", vpSick);
         }
     }
 }
